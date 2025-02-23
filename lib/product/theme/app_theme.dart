@@ -8,9 +8,9 @@ abstract final class AppTheme {
         appBarTheme: const AppBarTheme(
           titleTextStyle: _ProjectTextStyle.titleMedium,
           systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Colors.transparent, // Status bar'ı tamamen şeffaf yap
-            statusBarBrightness: Brightness.light, // iOS için ikonları açık hale getir
-            statusBarIconBrightness: Brightness.dark, // Android için ikonları koyu yap
+            statusBarColor: Colors.transparent,
+            statusBarBrightness: Brightness.light,
+            statusBarIconBrightness: Brightness.dark,
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -19,12 +19,12 @@ abstract final class AppTheme {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                minimumSize:  Size.fromHeight(50.h))),
+                minimumSize: Size.fromHeight(50.h))),
         textTheme: const TextTheme(
-          titleLarge: _ProjectTextStyle.titleLarge,
-          titleMedium: _ProjectTextStyle.titleMedium,
-          titleSmall: _ProjectTextStyle.titlesmall,
-        ),
+            titleLarge: _ProjectTextStyle.titleLarge,
+            titleMedium: _ProjectTextStyle.titleMedium,
+            titleSmall: _ProjectTextStyle.titlesmall,
+            bodyLarge: _ProjectTextStyle.bodyLarge),
       );
 }
 

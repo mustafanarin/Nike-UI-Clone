@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nike_ui_clone/feature/welcome/onboard_first_view.dart';
 import 'package:nike_ui_clone/feature/welcome/onboard_second_view.dart';
+import 'package:nike_ui_clone/feature/welcome/onboard_third_view.dart';
 
 class Onboardings extends StatefulWidget {
   const Onboardings({super.key});
@@ -27,9 +28,9 @@ class _OnboardingsState extends State<Onboardings> {
               });
             },
             children: const [
-              OnboardFirstView(), // Sayfa 1
-              OnboardSecondView(), // Sayfa 2
-              MyWidget1(), // Sayfa 3
+              OnboardFirstView(),
+              OnboardSecondView(),
+              OnboardThirdView(),
             ],
           ),
 

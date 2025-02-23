@@ -32,7 +32,7 @@ class _GetStartedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        bottom: 30.h,
+        bottom: 40.h,
         left: 20.w,
         right: 20.w,
         child: const ProjectButton(
@@ -123,17 +123,6 @@ class _FootImage extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class MyWidget1 extends StatelessWidget {
-  const MyWidget1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black,
     );
   }
 }

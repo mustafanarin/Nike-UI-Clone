@@ -9,6 +9,9 @@ enum PngOnboardPath {
   smile1,
   shoe1,
   footShadow2,
+  smile2,
+  shoe2,
+  pageShush3,
 }
 
 extension PngOnboardPathExtension on PngOnboardPath {
@@ -43,6 +46,15 @@ extension PngOnboardPathExtension on PngOnboardPath {
 
       case PngOnboardPath.footShadow2:
         return "foot_shadow2";
+
+      case PngOnboardPath.smile2:
+        return "smile2";
+
+      case PngOnboardPath.shoe2:
+        return "shoe2";
+
+      case PngOnboardPath.pageShush3:
+        return "page_shush3";
     }
   }
 

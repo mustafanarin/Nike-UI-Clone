@@ -8,9 +8,9 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // Status bar'ı tam transparan yap
-    statusBarIconBrightness: Brightness.light, // Android için ikonları açık yap
-    statusBarBrightness: Brightness.dark, // iOS için ikonları koyu yap
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.light,
+    statusBarBrightness: Brightness.dark,
   ));
   runApp(const MyApp());
 }

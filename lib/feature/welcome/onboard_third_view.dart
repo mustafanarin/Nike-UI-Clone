@@ -6,8 +6,8 @@ import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/extensions/context_extension.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 
-class OnboardSecondView extends StatelessWidget {
-  const OnboardSecondView({super.key});
+class OnboardThirdView extends StatelessWidget {
+  const OnboardThirdView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class OnboardSecondView extends StatelessWidget {
       backgroundColor: ProjectColors.cyanBlue,
       body: Stack(
         children: [
-          _TopDecorations(),
+          _TopDecoration(),
           _ShoeImage(),
           _NikeLogo(),
-          _TitleAndSubTitle(),
+          _TitleAndSubtitle(),
           _NextButton(),
         ],
       ),
@@ -26,28 +26,17 @@ class OnboardSecondView extends StatelessWidget {
   }
 }
 
-class _TopDecorations extends StatelessWidget {
-  const _TopDecorations();
+class _TopDecoration extends StatelessWidget {
+  const _TopDecoration();
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Positioned(
-          top: 80.h,
-          left: 40.w,
-          child: Image.asset(
-            PngOnboardPath.pageShush2.path,
-          ),
-        ),
-        Positioned(
-          top: 80.h,
-          left: 300.w,
-          child: Image.asset(
-            PngOnboardPath.smile1.path,
-          ),
-        ),
-      ],
+    return Positioned(
+      top: 80.h,
+      left: 50.w,
+      child: Image.asset(
+        PngOnboardPath.smile2.path,
+      ),
     );
   }
 }
@@ -60,17 +49,17 @@ class _ShoeImage extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 110.h,
+          top: 30.h,
           left: 0.w,
           child: Image.asset(
-            PngOnboardPath.shoe1.path,
+            PngOnboardPath.shoe2.path,
           ),
         ),
         Positioned(
-          top: 370.h,
-          left: 40.w,
+          top: 150.h,
+          left: 30.w,
           child: Image.asset(
-            PngOnboardPath.footShadow2.path,
+            PngOnboardPath.pageShush3.path,
           ),
         ),
       ],
@@ -96,8 +85,8 @@ class _NikeLogo extends StatelessWidget {
   }
 }
 
-class _TitleAndSubTitle extends StatelessWidget {
-  const _TitleAndSubTitle();
+class _TitleAndSubtitle extends StatelessWidget {
+  const _TitleAndSubtitle();
 
   @override
   Widget build(BuildContext context) {
@@ -105,10 +94,10 @@ class _TitleAndSubTitle extends StatelessWidget {
       children: [
         Positioned(
           top: 450.h,
-          left: 40.w,
-          right: 40.w,
+          left: 50.w,
+          right: 50.w,
           child: Text(
-            ProjectStrings.onboard2Title,
+            ProjectStrings.onboard3Title,
             style: context.textTheme().titleLarge?.copyWith(fontSize: 34, color: ProjectColors.white),
             textAlign: TextAlign.center,
           ),
@@ -118,7 +107,7 @@ class _TitleAndSubTitle extends StatelessWidget {
           left: 50.w,
           right: 50.w,
           child: Text(
-            ProjectStrings.onboard2SubTitle,
+            ProjectStrings.onboard3SubTitle,
             style: context.textTheme().titleSmall?.copyWith(color: ProjectColors.lightSilver),
             textAlign: TextAlign.center,
           ),

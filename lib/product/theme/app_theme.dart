@@ -48,7 +48,7 @@ class _ProjectTextStyle {
     fontFamily: "Raleway-Regular",
     fontSize: 16,
     color: ProjectColors.black,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
   static const bodyLarge = TextStyle(
     fontFamily: "Raleway-Regular",

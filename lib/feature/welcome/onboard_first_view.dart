@@ -6,8 +6,8 @@ import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/extensions/context_extension.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 
-class OnboardOneView extends StatelessWidget {
-  const OnboardOneView({super.key});
+class OnboardFirstView extends StatelessWidget {
+  const OnboardFirstView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _GetStartedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        bottom: 20.h,
+        bottom: 30.h,
         left: 20.w,
         right: 20.w,
         child: const ProjectButton(
@@ -60,7 +60,7 @@ class _TopDecorations extends StatelessWidget {
           left: 100.w,
           child: Text(
             ProjectStrings.onboard1Title,
-            style: context.textTheme().titleLarge?.copyWith(color: ProjectColors.white),
+            style: context.textTheme().titleLarge?.copyWith(fontWeight: FontWeight.w800, color: ProjectColors.white),
             textAlign: TextAlign.center,
           ),
         ),
@@ -119,21 +119,10 @@ class _FootImage extends StatelessWidget {
           top: 520.h,
           left: 60.w,
           child: Image.asset(
-            PngOnboardPath.footShadow.path,
+            PngOnboardPath.footShadow1.path,
           ),
         ),
       ],
-    );
-  }
-}
-
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
     );
   }
 }

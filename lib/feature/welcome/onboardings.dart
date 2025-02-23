@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nike_ui_clone/feature/welcome/onboard_one_view.dart';
+import 'package:nike_ui_clone/feature/welcome/onboard_first_view.dart';
+import 'package:nike_ui_clone/feature/welcome/onboard_second_view.dart';
 
 class Onboardings extends StatefulWidget {
   const Onboardings({super.key});
@@ -26,15 +27,15 @@ class _OnboardingsState extends State<Onboardings> {
               });
             },
             children: const [
-              OnboardOneView(), // Sayfa 1
-              MyWidget(), // Sayfa 2
+              OnboardFirstView(), // Sayfa 1
+              OnboardSecondView(), // Sayfa 2
               MyWidget1(), // Sayfa 3
             ],
           ),
 
           // Page indicators
           Positioned(
-            bottom: 100,
+            bottom: 150,
             left: 0,
             right: 0,
             child: Row(

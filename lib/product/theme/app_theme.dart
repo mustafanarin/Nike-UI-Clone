@@ -24,7 +24,8 @@ abstract final class AppTheme {
             titleLarge: _ProjectTextStyle.titleLarge,
             titleMedium: _ProjectTextStyle.titleMedium,
             titleSmall: _ProjectTextStyle.titlesmall,
-            bodyLarge: _ProjectTextStyle.bodyLarge),
+            bodyLarge: _ProjectTextStyle.bodyLarge,
+            bodyMedium: _ProjectTextStyle.bodyMedium),
       );
 }
 
@@ -41,7 +42,7 @@ class _ProjectTextStyle {
     fontFamily: "Raleway-Bold",
     fontSize: 16,
     color: ProjectColors.black,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
   // for sup title
   static const titlesmall = TextStyle(
@@ -55,5 +56,11 @@ class _ProjectTextStyle {
     fontSize: 14,
     color: ProjectColors.black,
     fontWeight: FontWeight.w500,
+  );
+  static const bodyMedium = TextStyle(
+    fontFamily: "Raleway-Regular",
+    fontSize: 12,
+    color: ProjectColors.auroMetal,
+    fontWeight: FontWeight.w400,
   );
 }

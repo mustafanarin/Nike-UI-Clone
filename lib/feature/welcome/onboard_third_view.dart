@@ -126,7 +126,9 @@ class _NextButton extends StatelessWidget {
         bottom: 40.h,
         left: 20.w,
         right: 20.w,
-        child: const ProjectButton(
+        child:  ProjectButton(
+          backgraoundColor: ProjectColors.white,
+          onPressed: (){},
           title: ProjectStrings.onboard1Button,
         ));
   }

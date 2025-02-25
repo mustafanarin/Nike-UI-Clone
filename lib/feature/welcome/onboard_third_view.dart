@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nike_ui_clone/product/constants/enum/png_onboard_path.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
-import 'package:nike_ui_clone/product/extensions/context_extension.dart';
+import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 
 class OnboardThirdView extends StatelessWidget {
@@ -126,7 +126,9 @@ class _NextButton extends StatelessWidget {
         bottom: 40.h,
         left: 20.w,
         right: 20.w,
-        child: const ProjectButton(
+        child:  ProjectButton(
+          backgroundColor: ProjectColors.white,
+          onPressed: (){},
           title: ProjectStrings.onboard1Button,
         ));
   }

@@ -32,4 +32,9 @@ abstract final class ProjectStrings {
   static const String signUpGoogleButton = "Sign up with Google";
   static const String alreadyAccount = "Already Have Account? ";
   static const String logIn = "Log In";
+
+  // Forgot Password
+  static const String resetPassword = "Reset Password";
+  static const String forgotPassword = "Forgot Password";
+  static const String forgotPasswordSubTitle = "Enter Your Email Account To Reset \nYour Password";
 }

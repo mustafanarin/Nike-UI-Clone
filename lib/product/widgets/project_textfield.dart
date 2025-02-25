@@ -6,14 +6,14 @@ class ProjectTextField extends StatefulWidget {
   const ProjectTextField({
     super.key,
     required this.hintText,
-    this.validator,
+    required this.validator,
     this.isPassword = false,
     this.obscuringCharacter = '●',
     this.suffixIcon,
     this.autovalidateMode = AutovalidateMode.onUnfocus,
     this.textStyle,
     this.controller,
-    this.onChanged, 
+    this.onChanged,
     required this.keyboardType,
   });
 

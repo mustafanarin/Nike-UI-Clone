@@ -25,7 +25,6 @@ class RegisterView extends StatelessWidget {
               SizedBox(height: 25.h),
               const _BackIconButton(),
               const _TitleAndSubTitleText(),
-              SizedBox(height: 30.h),
               const _NameEmailPasswordTextField(),
               const _SignUpButton(),
               SizedBox(height: 25.h),
@@ -49,6 +48,7 @@ class _NameEmailPasswordTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(height: 30.h),
         const _YourNameText(),
         const _TextfieldName(),
         const _EmailText(),

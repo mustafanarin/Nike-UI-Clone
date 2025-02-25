@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nike_ui_clone/feature/authentication/forgot_password_view.dart';
 import 'package:nike_ui_clone/feature/authentication/register_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
@@ -26,23 +27,39 @@ class LoginView extends StatelessWidget {
               SizedBox(height: 25.h),
               const _BackIconButton(),
               const _TitleAndSubTitleText(),
-              SizedBox(height: 30.h),
-              const _EmailText(),
-              const _TextFiledEmail(),
-              SizedBox(height: 30.h),
-              const _PasswordText(),
-              const _TexfieldPassword(),
+              const _EmailAndPasswordTextfield(),
               const _RecoveryPasswordText(),
               const _SignInButton(),
               SizedBox(height: 25.h),
               const _SignInGoogleButton(),
               const Spacer(flex: 4),
-              const _CreateAccountRow(),
+              const _CreateAccountRowText(),
               const Spacer(flex: 1),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class _EmailAndPasswordTextfield extends StatelessWidget {
+  const _EmailAndPasswordTextfield({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 30.h),
+        const _EmailText(),
+        const _TextFiledEmail(),
+        SizedBox(height: 30.h),
+        const _PasswordText(),
+        const _TexfieldPassword(),
+      ],
     );
   }
 }
@@ -166,10 +183,16 @@ class _RecoveryPasswordText extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Text(
-            ProjectStrings.recoveryPassword,
-            style: context.textTheme().bodyMedium,
-          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ForgotPasswordView()));
+            },
+            behavior: HitTestBehavior.opaque,
+            child: Text(
+              ProjectStrings.recoveryPassword,
+              style: context.textTheme().bodyMedium,
+            ),
+          )
         ],
       ),
     );
@@ -202,8 +225,8 @@ class _SignInGoogleButton extends StatelessWidget {
   }
 }
 
-class _CreateAccountRow extends StatelessWidget {
-  const _CreateAccountRow();
+class _CreateAccountRowText extends StatelessWidget {
+  const _CreateAccountRowText();
 
   @override
   Widget build(BuildContext context) {

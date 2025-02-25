@@ -4,7 +4,7 @@ import 'package:nike_ui_clone/feature/authentication/login_view.dart';
 import 'package:nike_ui_clone/product/constants/enum/png_onboard_path.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
-import 'package:nike_ui_clone/product/extensions/context_extension.dart';
+import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 
 class OnboardFirstView extends StatelessWidget {
@@ -37,7 +37,7 @@ class _GetStartedButton extends StatelessWidget {
         left: 20.w,
         right: 20.w,
         child: ProjectButton(
-          backgraoundColor: ProjectColors.white,
+          backgroundColor: ProjectColors.white,
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LoginView()));
           },

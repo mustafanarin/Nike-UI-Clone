@@ -13,6 +13,25 @@ abstract final class AppTheme {
             statusBarIconBrightness: Brightness.dark,
           ),
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          hintStyle: _ProjectTextStyle.bodyLarge.copyWith(
+            color: ProjectColors.dimGray.withOpacity(0.6),
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
+          filled: true,
+          fillColor: ProjectColors.cultured,
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
                 elevation: 0,

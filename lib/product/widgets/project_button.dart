@@ -1,26 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
-import 'package:nike_ui_clone/product/extensions/context_extension.dart';
+import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
 
 class ProjectButton extends StatelessWidget {
   const ProjectButton({
     super.key,
     required this.title,
     required this.onPressed,
-    this.backgraoundColor = ProjectColors.brandeisBlue,
+    this.backgroundColor = ProjectColors.brandeisBlue,
+    this.isGoogleButton = false,
   });
+
   final String title;
   final VoidCallback onPressed;
-  final Color backgraoundColor;
+  final Color backgroundColor;
+  final bool isGoogleButton;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: backgraoundColor),
+    if (isGoogleButton) {
+      return ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(backgroundColor: ProjectColors.cultured),
         onPressed: onPressed,
-        child: Text(
+        icon: Image.asset("assets/png/general/googleIcon.png"),
+        label: Text(
           title,
           style: context.textTheme().bodyLarge?.copyWith(color: ProjectColors.black),
-        ));
+        ),
+      );
+    }
+
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(backgroundColor: backgroundColor),
+      onPressed: onPressed,
+      child: Text(
+        title,
+        style: context.textTheme().bodyLarge?.copyWith(
+            color: (backgroundColor == ProjectColors.brandeisBlue) ? ProjectColors.white : ProjectColors.black),
+      ),
+    );
   }
 }

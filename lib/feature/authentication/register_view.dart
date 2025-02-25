@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nike_ui_clone/feature/authentication/register_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
@@ -8,8 +7,8 @@ import 'package:nike_ui_clone/product/utility/validators/validators.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 import 'package:nike_ui_clone/product/widgets/project_textfield.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,22 +26,38 @@ class LoginView extends StatelessWidget {
               const _BackIconButton(),
               const _TitleAndSubTitleText(),
               SizedBox(height: 30.h),
-              const _EmailText(),
-              const _TextFiledEmail(),
-              SizedBox(height: 30.h),
-              const _PasswordText(),
-              const _TexfieldPassword(),
-              const _RecoveryPasswordText(),
-              const _SignInButton(),
+              const _NameEmailPasswordTextField(),
+              const _SignUpButton(),
               SizedBox(height: 25.h),
-              const _SignInGoogleButton(),
-              const Spacer(flex: 4),
+              const _SignUpGoogleButton(),
+              const Spacer(flex: 2),
               const _CreateAccountRow(),
               const Spacer(flex: 1),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class _NameEmailPasswordTextField extends StatelessWidget {
+  const _NameEmailPasswordTextField();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const _YourNameText(),
+        const _TextfieldName(),
+        const _EmailText(),
+        const _TextFiledEmail(),
+        SizedBox(height: 30.h),
+        const _PasswordText(),
+        const _TexfieldPassword(),
+        SizedBox(height: 35.h)
+      ],
     );
   }
 }
@@ -78,7 +93,7 @@ class _TitleAndSubTitleText extends StatelessWidget {
       children: [
         Center(
           child: Text(
-            ProjectStrings.helloText,
+            ProjectStrings.registerTitle,
             style: context.textTheme().titleLarge,
           ),
         ),
@@ -99,13 +114,41 @@ class _TitleAndSubTitleText extends StatelessWidget {
   }
 }
 
+class _YourNameText extends StatelessWidget {
+  const _YourNameText();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: 8.h),
+      child: Text(
+        ProjectStrings.yourName,
+        style: context.textTheme().titleMedium,
+      ),
+    );
+  }
+}
+
+class _TextfieldName extends StatelessWidget {
+  const _TextfieldName();
+
+  @override
+  Widget build(BuildContext context) {
+    return ProjectTextField(
+      hintText: ProjectStrings.nameHint,
+      validator: Validators().validateName,
+      keyboardType: TextInputType.name,
+    );
+  }
+}
+
 class _EmailText extends StatelessWidget {
   const _EmailText();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 8.h),
+      padding: EdgeInsets.symmetric(vertical: 8.h),
       child: Text(
         ProjectStrings.emailAddress,
         style: context.textTheme().titleMedium,
@@ -156,46 +199,26 @@ class _TexfieldPassword extends StatelessWidget {
   }
 }
 
-class _RecoveryPasswordText extends StatelessWidget {
-  const _RecoveryPasswordText();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 10.h, bottom: 20.h),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            ProjectStrings.recoveryPassword,
-            style: context.textTheme().bodyMedium,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _SignInButton extends StatelessWidget {
-  const _SignInButton();
+class _SignUpButton extends StatelessWidget {
+  const _SignUpButton();
 
   @override
   Widget build(BuildContext context) {
     return ProjectButton(
-        title: ProjectStrings.signInButton,
+        title: ProjectStrings.signUpButton,
         onPressed: () {
           // TODO valide control
         });
   }
 }
 
-class _SignInGoogleButton extends StatelessWidget {
-  const _SignInGoogleButton();
+class _SignUpGoogleButton extends StatelessWidget {
+  const _SignUpGoogleButton();
 
   @override
   Widget build(BuildContext context) {
     return ProjectButton(
-      title: ProjectStrings.signInGoogleButton,
+      title: ProjectStrings.signUpGoogleButton,
       onPressed: () {},
       isGoogleButton: true,
     );
@@ -211,16 +234,16 @@ class _CreateAccountRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          ProjectStrings.newUser,
+          ProjectStrings.alreadyAccount,
           style: context.textTheme().titleSmall?.copyWith(color: ProjectColors.dimGray),
         ),
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RegisterView()));
+            Navigator.of(context).pop();
           },
           behavior: HitTestBehavior.opaque,
           child: Text(
-            ProjectStrings.createAccount,
+            ProjectStrings.logIn,
             style: context.textTheme().titleSmall,
           ),
         )

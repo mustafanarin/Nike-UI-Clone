@@ -9,4 +9,5 @@ abstract final class ProjectColors {
   static const Color dimGray = Color(0xff6A6A6A);
   static const Color cultured = Color(0xffF7F7F9);
   static const Color brandeisBlue = Color(0xff0D6EFD);
+  static const Color red = Colors.red;
 }

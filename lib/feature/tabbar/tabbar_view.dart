@@ -22,7 +22,6 @@ class _BottomNavExampleState extends State<BottomNavExample> {
     Icons.person_outline,
   ];
 
-  // Sayfalar
   final List<Widget> _pages = [
     const HomeView(),
     Container(color: Colors.amber),

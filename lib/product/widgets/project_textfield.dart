@@ -6,7 +6,7 @@ class ProjectTextField extends StatefulWidget {
   const ProjectTextField({
     super.key,
     required this.hintText,
-    required this.validator,
+    this.validator,
     this.isPassword = false,
     this.obscuringCharacter = '●',
     this.suffixIcon,
@@ -15,6 +15,9 @@ class ProjectTextField extends StatefulWidget {
     this.controller,
     this.onChanged,
     required this.keyboardType,
+    this.prefixIcon,
+    this.filled,
+    this.fillColor,
   });
 
   final String hintText;
@@ -22,9 +25,12 @@ class ProjectTextField extends StatefulWidget {
   final bool isPassword;
   final String obscuringCharacter;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final AutovalidateMode autovalidateMode;
   final TextStyle? textStyle;
   final TextInputType keyboardType;
+  final bool? filled;
+  final Color? fillColor;
 
   final TextEditingController? controller;
   final Function(String)? onChanged;
@@ -57,7 +63,10 @@ class _ProjectTextFieldState extends State<ProjectTextField> {
                 color: ProjectColors.black.withOpacity(0.7),
               ),
       decoration: InputDecoration(
+        filled: widget.filled,
+        fillColor: widget.fillColor,
         hintText: widget.hintText,
+        prefixIcon: widget.prefixIcon,
         suffixIcon: widget.isPassword
             ? IconButton(
                 splashColor: Colors.transparent,

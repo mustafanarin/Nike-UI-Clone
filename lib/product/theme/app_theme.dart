@@ -61,7 +61,7 @@ class _ProjectTextStyle {
     fontFamily: "Raleway-Bold",
     fontSize: 16,
     color: ProjectColors.black,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
   // for sup title
   static const titlesmall = TextStyle(
@@ -80,6 +80,6 @@ class _ProjectTextStyle {
     fontFamily: "Raleway-Regular",
     fontSize: 12,
     color: ProjectColors.auroMetal,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
 }

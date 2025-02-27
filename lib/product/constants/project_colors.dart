@@ -10,4 +10,5 @@ abstract final class ProjectColors {
   static const Color cultured = Color(0xffF7F7F9);
   static const Color brandeisBlue = Color(0xff0D6EFD);
   static const Color red = Colors.red;
+  static const Color slateBlue = Color(0xff674DC5);
 }

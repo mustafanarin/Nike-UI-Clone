@@ -1,17 +1,17 @@
 abstract final class ProjectStrings {
-  // Onboard first view
+  // Onboard first
   static const String onboard1Title = "WELLCOME TO\nNİKE";
   static const String onboard1Button = "Get Started";
 
-  // Onboard second view
+  // Onboard second
   static const String onboard2Title = "Let's Start Journay With Nike";
   static const String onboard2SubTitle = "Smart, Gorgeous & Fashionable Collection Explor Now";
 
-  // Onboard third view
+  // Onboard third
   static const String onboard3Title = "You Have the Power To";
   static const String onboard3SubTitle = "There Are Many Beautiful And Attractive Plants To Your Room";
 
-  // Login view
+  // Login
   static const String helloText = "Hello Again!";
   static const String helloSupTitle = "Fill Your Details Or Continue With \nSocial Media";
   static const String emailAddress = "Email Address";
@@ -24,7 +24,7 @@ abstract final class ProjectStrings {
   static const String newUser = "New User? ";
   static const String createAccount = "Create Account";
 
-  // Register View
+  // Register
   static const String yourName = "Your Name";
   static const String nameHint = "xxxxxxxxx";
   static const String registerTitle = "Register Account";
@@ -37,4 +37,19 @@ abstract final class ProjectStrings {
   static const String resetPassword = "Reset Password";
   static const String forgotPassword = "Forgot Password";
   static const String forgotPasswordSubTitle = "Enter Your Email Account To Reset \nYour Password";
+
+  // Home
+  static const String explore = "Explore";
+  static const String search = "Looking for shoes";
+  static const String selectCategory = "Select Category";
+  static const String allShoes = 'All Shoes';
+  static const String outdoor = 'Outdoor';
+  static const String tennis = "Tennis";
+  static const String running = 'Running';
+  static const String football = 'Football';
+  static const String popularShoes = "Popular Shoes";
+  static const String newArrivals = "New Arrivals";
+  static const String summerSale = "Summer Sale";
+  static const String sale = "15% OFF";
+  static const String seeAll = "See all";
 }

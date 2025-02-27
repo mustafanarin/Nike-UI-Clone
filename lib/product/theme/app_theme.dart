@@ -7,6 +7,7 @@ abstract final class AppTheme {
   static ThemeData get getLightTheme => ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           titleTextStyle: _ProjectTextStyle.titleMedium,
+          centerTitle: true,
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarBrightness: Brightness.light,

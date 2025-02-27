@@ -11,4 +11,5 @@ abstract final class ProjectColors {
   static const Color brandeisBlue = Color(0xff0D6EFD);
   static const Color red = Colors.red;
   static const Color slateBlue = Color(0xff674DC5);
+  static const Color grey = Colors.grey;
 }

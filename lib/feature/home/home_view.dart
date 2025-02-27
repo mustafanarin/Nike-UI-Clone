@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nike_ui_clone/feature/home/home_detail_view.dart';
 import 'package:nike_ui_clone/product/constants/enum/png_general_path.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
@@ -18,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
   final List<ShoeModel> _popularShoes = [
     ShoeModel(name: "Nike Jordan", category: "Best Seller", price: 302.00, imagePath: "assets/png/general/shoe1.png"),
-    ShoeModel(name: "Nike Air Max", category: "Best Seller", price: 752.00, imagePath: "assets/png/general/shoe2.png"),
+    ShoeModel(name: "Nike Club Max", category: "Best Seller", price: 47.7, imagePath: "assets/png/general/shoe2.png"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -71,7 +72,6 @@ class _CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
       ),
-      centerTitle: true,
       actions: [
         Stack(
           children: [
@@ -181,55 +181,58 @@ class _PopularShoesGridViewList extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           final popularShoe = _popularShoes[index];
-          return Container(
-            decoration:
-                const BoxDecoration(color: ProjectColors.white, borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Icon(
-                        Icons.favorite_border_outlined,
-                        size: 18,
-                      ),
-                      Image.asset(
-                        popularShoe.imagePath,
-                        height: 100.h,
-                        fit: BoxFit.contain,
-                      ),
-                      Text(
-                        popularShoe.category,
-                        style: context.textTheme().bodyLarge?.copyWith(color: ProjectColors.brandeisBlue),
-                      ),
-                      Text(
-                        popularShoe.name,
-                        style: context.textTheme().titleMedium?.copyWith(color: ProjectColors.dimGray),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        "\$${popularShoe.price}",
-                        style: context.textTheme().bodyLarge,
-                      )
-                    ],
+          return InkWell(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  HomeDetailView(shoeModel: popularShoe,))),
+            child: Container(
+              decoration:
+                  const BoxDecoration(color: ProjectColors.white, borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.favorite_border_outlined,
+                          size: 18,
+                        ),
+                        Image.asset(
+                          popularShoe.imagePath,
+                          height: 100.h,
+                          fit: BoxFit.contain,
+                        ),
+                        Text(
+                          popularShoe.category,
+                          style: context.textTheme().bodyLarge?.copyWith(color: ProjectColors.brandeisBlue),
+                        ),
+                        Text(
+                          popularShoe.name,
+                          style: context.textTheme().titleMedium?.copyWith(color: ProjectColors.dimGray),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "\$${popularShoe.price}",
+                          style: context.textTheme().bodyLarge,
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Positioned(
-                  bottom: -5.h,
-                  right: -5.w,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        color: ProjectColors.brandeisBlue,
-                        borderRadius:
-                            BorderRadius.only(topLeft: Radius.circular(20), bottomRight: Radius.circular(35))),
-                    child: IconButton(color: ProjectColors.white, onPressed: () {}, icon: const Icon(Icons.add)),
-                  ),
-                )
-              ],
+                  Positioned(
+                    bottom: -5.h,
+                    right: -5.w,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          color: ProjectColors.brandeisBlue,
+                          borderRadius:
+                              BorderRadius.only(topLeft: Radius.circular(20), bottomRight: Radius.circular(35))),
+                      child: IconButton(color: ProjectColors.white, onPressed: () {}, icon: const Icon(Icons.add)),
+                    ),
+                  )
+                ],
+              ),
             ),
           );
         },

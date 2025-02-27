@@ -52,4 +52,11 @@ abstract final class ProjectStrings {
   static const String summerSale = "Summer Sale";
   static const String sale = "15% OFF";
   static const String seeAll = "See all";
+
+  // Home Detail
+  static const String sneakerShop = "Sneaker Shop";
+  static const String shoeDescription =
+      "The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike......";
+  static const String readMore = "Read More";
+  static const String add = "Add To Card";
 }

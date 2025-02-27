@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nike_ui_clone/feature/cart/my_cart_view.dart';
 import 'package:nike_ui_clone/feature/favorite/favorite_view.dart';
 import 'package:nike_ui_clone/feature/home/home_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
@@ -26,7 +27,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final List<Widget> _pages = [
     const HomeView(),
     const FavoriteView(),
-    Container(color: Colors.amber),
+     CartView(),
     Container(color: Colors.amber),
     Container(color: Colors.amber),
   ];
@@ -45,7 +46,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           backgroundColor: ProjectColors.brandeisBlue,
           onPressed: () {
             setState(() {
-              _currentIndex = 2; // CartPage
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  CartView()),
+              );
             });
           },
           elevation: 8,

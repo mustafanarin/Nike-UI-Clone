@@ -7,6 +7,7 @@ abstract final class AppTheme {
   static ThemeData get getLightTheme => ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           titleTextStyle: _ProjectTextStyle.titleMedium,
+          centerTitle: true,
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarBrightness: Brightness.light,
@@ -47,7 +48,7 @@ abstract final class AppTheme {
             bodyMedium: _ProjectTextStyle.bodyMedium),
       );
 }
-
+// TODO sp ??
 class _ProjectTextStyle {
   // for big title
   static const titleLarge = TextStyle(
@@ -61,7 +62,7 @@ class _ProjectTextStyle {
     fontFamily: "Raleway-Bold",
     fontSize: 16,
     color: ProjectColors.black,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
   // for sup title
   static const titlesmall = TextStyle(
@@ -80,6 +81,6 @@ class _ProjectTextStyle {
     fontFamily: "Raleway-Regular",
     fontSize: 12,
     color: ProjectColors.auroMetal,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
 }

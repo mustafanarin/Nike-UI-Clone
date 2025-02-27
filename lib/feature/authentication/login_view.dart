@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nike_ui_clone/feature/authentication/forgot_password_view.dart';
 import 'package:nike_ui_clone/feature/authentication/register_view.dart';
+import 'package:nike_ui_clone/feature/home/home_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
@@ -9,7 +10,7 @@ import 'package:nike_ui_clone/product/utility/validators/validators.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 import 'package:nike_ui_clone/product/widgets/project_textfield.dart';
 
-class LoginView extends StatelessWidget {
+final class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
@@ -207,7 +208,8 @@ class _SignInButton extends StatelessWidget {
     return ProjectButton(
         title: ProjectStrings.signInButton,
         onPressed: () {
-          // TODO valide control
+          // TODO valide control and pushremoveuntil
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeView()));
         });
   }
 }

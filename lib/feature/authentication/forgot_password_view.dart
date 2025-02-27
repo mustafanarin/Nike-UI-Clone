@@ -7,7 +7,7 @@ import 'package:nike_ui_clone/product/utility/validators/validators.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 import 'package:nike_ui_clone/product/widgets/project_textfield.dart';
 
-class ForgotPasswordView extends StatelessWidget {
+final class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
 
   @override

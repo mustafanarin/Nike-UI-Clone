@@ -12,6 +12,10 @@ dependencies:
 
   cupertino_icons: ^1.0.8
 
+  # Animation
+  animated_bottom_navigation_bar: ^1.4.0
+  flutter_slidable: ^3.1.2
+
   # Core
   flutter_screenutil: ^5.9.3
 

@@ -6,7 +6,7 @@ import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 
-class OnboardThirdView extends StatelessWidget {
+final class OnboardThirdView extends StatelessWidget {
   const OnboardThirdView({super.key});
 
   @override

@@ -8,7 +8,7 @@ import 'package:nike_ui_clone/product/model/shoe_model.dart';
 import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
 import 'package:nike_ui_clone/product/widgets/project_textfield.dart';
 
-class HomeView extends StatefulWidget {
+final class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
   @override
@@ -18,8 +18,8 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
   final List<ShoeModel> _popularShoes = [
-    ShoeModel(name: "Nike Jordan", category: "Best Seller", price: 302.00, imagePath: "assets/png/general/shoe1.png"),
-    ShoeModel(name: "Nike Club Max", category: "Best Seller", price: 47.7, imagePath: "assets/png/general/shoe2.png"),
+    ShoeModel(name: "Nike Jordan", category: "Best Seller", price: 302.00, imagePath: PngGeneralPath.shoe1.path),
+    ShoeModel(name: "Nike Club Max", category: "Best Seller", price: 47.7, imagePath: PngGeneralPath.shoe2.path),
   ];
   @override
   Widget build(BuildContext context) {
@@ -160,7 +160,6 @@ class _SearchTextFieldRow extends StatelessWidget {
 
 class _PopularShoesGridViewList extends StatelessWidget {
   const _PopularShoesGridViewList({
-    super.key,
     required List<ShoeModel> popularShoes,
   }) : _popularShoes = popularShoes;
 

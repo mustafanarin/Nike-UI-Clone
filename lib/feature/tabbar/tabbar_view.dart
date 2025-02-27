@@ -1,17 +1,18 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nike_ui_clone/feature/favorite/favorite_view.dart';
 import 'package:nike_ui_clone/feature/home/home_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 
-class BottomNavExample extends StatefulWidget {
-  const BottomNavExample({super.key});
+final class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
 
   @override
-  _BottomNavExampleState createState() => _BottomNavExampleState();
+  _BottomNavBarState createState() => _BottomNavBarState();
 }
 
-class _BottomNavExampleState extends State<BottomNavExample> {
+class _BottomNavBarState extends State<BottomNavBar> {
   int _bottomNavIndex = 0;
   int _currentIndex = 0;
 
@@ -24,7 +25,7 @@ class _BottomNavExampleState extends State<BottomNavExample> {
 
   final List<Widget> _pages = [
     const HomeView(),
-    Container(color: Colors.amber),
+    const FavoriteView(),
     Container(color: Colors.amber),
     Container(color: Colors.amber),
     Container(color: Colors.amber),

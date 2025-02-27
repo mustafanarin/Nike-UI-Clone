@@ -59,4 +59,7 @@ abstract final class ProjectStrings {
       "The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike......";
   static const String readMore = "Read More";
   static const String add = "Add To Card";
+
+  // Favorite
+  static const String favorite = "Favourite";
 }

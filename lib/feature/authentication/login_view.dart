@@ -10,7 +10,7 @@ import 'package:nike_ui_clone/product/utility/validators/validators.dart';
 import 'package:nike_ui_clone/product/widgets/project_button.dart';
 import 'package:nike_ui_clone/product/widgets/project_textfield.dart';
 
-class LoginView extends StatelessWidget {
+final class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override

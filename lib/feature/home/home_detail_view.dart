@@ -6,7 +6,7 @@ import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/model/shoe_model.dart';
 import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
 
-class HomeDetailView extends StatelessWidget {
+final class HomeDetailView extends StatelessWidget {
   const HomeDetailView({super.key, required this.shoeModel});
 
   final ShoeModel shoeModel;

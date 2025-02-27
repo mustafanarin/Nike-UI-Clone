@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.getLightTheme,
           title: 'Material App',
-          home: BottomNavExample(),
+          home: BottomNavBar(),
         );
       },
     );

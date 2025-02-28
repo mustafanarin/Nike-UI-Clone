@@ -5,6 +5,7 @@ import 'package:nike_ui_clone/feature/cart/my_cart_view.dart';
 import 'package:nike_ui_clone/feature/favorite/favorite_view.dart';
 import 'package:nike_ui_clone/feature/home/home_view.dart';
 import 'package:nike_ui_clone/feature/notification/notification_view.dart';
+import 'package:nike_ui_clone/feature/profile/profile_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 
 final class BottomNavBar extends StatefulWidget {
@@ -30,7 +31,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const FavoriteView(),
     CartView(),
     NotificationView(),
-    Container(color: Colors.amber),
+    const ProfileView(),
   ];
 
   @override
@@ -46,12 +47,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: FloatingActionButton(
           backgroundColor: ProjectColors.brandeisBlue,
           onPressed: () {
-            setState(() {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CartView()),
-              );
-            });
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CartView()),
+            );
           },
           elevation: 8,
           shape: const CircleBorder(),
@@ -81,7 +80,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             } else if (index == 2) {
               _currentIndex = 3; // Notifications
             } else if (index == 3) {
-              _currentIndex = 4; // Profile
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfileView()),
+              ); // Profile
             }
           });
         },

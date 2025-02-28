@@ -5,10 +5,10 @@ import 'package:nike_ui_clone/product/constants/project_colors.dart';
 
 abstract final class AppTheme {
   static ThemeData get getLightTheme => ThemeData.light().copyWith(
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           titleTextStyle: _ProjectTextStyle.titleMedium,
           centerTitle: true,
-          systemOverlayStyle: SystemUiOverlayStyle(
+          systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarBrightness: Brightness.light,
             statusBarIconBrightness: Brightness.dark,
@@ -40,7 +40,7 @@ abstract final class AppTheme {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 minimumSize: Size.fromHeight(50.h))),
-        textTheme: const TextTheme(
+        textTheme: TextTheme(
             titleLarge: _ProjectTextStyle.titleLarge,
             titleMedium: _ProjectTextStyle.titleMedium,
             titleSmall: _ProjectTextStyle.titlesmall,
@@ -48,38 +48,38 @@ abstract final class AppTheme {
             bodyMedium: _ProjectTextStyle.bodyMedium),
       );
 }
-// TODO sp ??
+
 class _ProjectTextStyle {
   // for big title
-  static const titleLarge = TextStyle(
+  static final titleLarge = TextStyle(
     fontFamily: "Raleway-Black",
-    fontSize: 30,
+    fontSize: 30.sp,
     color: ProjectColors.black,
     fontWeight: FontWeight.w700,
   );
   // for normal title
-  static const titleMedium = TextStyle(
+  static final titleMedium = TextStyle(
     fontFamily: "Raleway-Bold",
-    fontSize: 16,
+    fontSize: 16.sp,
     color: ProjectColors.black,
     fontWeight: FontWeight.w500,
   );
   // for sup title
-  static const titlesmall = TextStyle(
+  static final titlesmall = TextStyle(
     fontFamily: "Raleway-Regular",
-    fontSize: 16,
+    fontSize: 16.sp,
     color: ProjectColors.black,
     fontWeight: FontWeight.w400,
   );
-  static const bodyLarge = TextStyle(
+  static final bodyLarge = TextStyle(
     fontFamily: "Raleway-Regular",
-    fontSize: 14,
+    fontSize: 14.sp,
     color: ProjectColors.black,
     fontWeight: FontWeight.w500,
   );
-  static const bodyMedium = TextStyle(
+  static final bodyMedium = TextStyle(
     fontFamily: "Raleway-Regular",
-    fontSize: 12,
+    fontSize: 12.sp,
     color: ProjectColors.auroMetal,
     fontWeight: FontWeight.w500,
   );

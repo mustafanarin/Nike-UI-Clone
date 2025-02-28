@@ -10,6 +10,8 @@ enum PngGeneralPath {
   shoe4,
   starShush,
   shoeEllips,
+  profilePhoto,
+  logo
 }
 
 extension PngGeneralPathExtension on PngGeneralPath {
@@ -47,6 +49,12 @@ extension PngGeneralPathExtension on PngGeneralPath {
 
       case PngGeneralPath.shoeEllips:
         return "shoe_ellips";
+
+      case PngGeneralPath.profilePhoto:
+        return "profile_photo";
+
+      case PngGeneralPath.logo:
+        return "logo";
     }
   }
 

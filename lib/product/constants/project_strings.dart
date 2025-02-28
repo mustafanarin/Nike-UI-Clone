@@ -1,4 +1,7 @@
 abstract final class ProjectStrings {
+  // Splash
+  static const String nike = 'NIKE';
+
   // Onboard first
   static const String onboard1Title = "WELLCOME TO\nNİKE";
   static const String onboard1Button = "Get Started";
@@ -76,4 +79,10 @@ abstract final class ProjectStrings {
   static const String notification = "Notifications";
   static const String recent = "Recent";
   static const String yesterday = "Yesterday";
+
+  // Profile
+  static const String profile = "Profile";
+  static const String userName = "EMMANUEL OYIBOKE";
+  static const String userEmail = "emmanueloyiboke@gmail.com";
+  static const String saveNow = "Save Now";
 }

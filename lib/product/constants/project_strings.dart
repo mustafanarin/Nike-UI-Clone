@@ -62,4 +62,18 @@ abstract final class ProjectStrings {
 
   // Favorite
   static const String favorite = "Favourite";
+
+  // My Cart
+  static const String myCart = "My Cart";
+  static const String item = "item";
+  static const String subtotal = "Subtotal";
+  static const String delivery = "Delivery";
+  static const String totalCost = "Total Cost";
+  static const String checkout = "Checkout";
+  static const String quantity = "Quantity: 1";
+
+  // Notification
+  static const String notification = "Notifications";
+  static const String recent = "Recent";
+  static const String yesterday = "Yesterday";
 }

@@ -1,15 +1,16 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:nike_ui_clone/feature/tabbar/tabbar_view.dart';
+import 'package:nike_ui_clone/feature/home/home_detail_view.dart';
 import 'package:nike_ui_clone/product/constants/enum/png_general_path.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
+import 'package:nike_ui_clone/product/constants/project_strings.dart';
 import 'package:nike_ui_clone/product/model/shoe_model.dart';
 import 'package:nike_ui_clone/product/utility/extensions/context_extension.dart';
+import 'package:nike_ui_clone/product/widgets/project_button.dart';
 
-class CartView extends StatelessWidget {
-   CartView({super.key});
+final class CartView extends StatelessWidget {
+  CartView({super.key});
 
   final List<ShoeModel> cartItems = [
     ShoeModel(
@@ -19,10 +20,10 @@ class CartView extends StatelessWidget {
       imagePath: PngGeneralPath.shoe1.path,
     ),
     ShoeModel(
-      name: "Nike Air Max",
+      name: "Nike Club Max",
       category: "Best Seller",
-      price: 37.80,
-      imagePath: PngGeneralPath.shoe3.path,
+      price: 57.6,
+      imagePath: PngGeneralPath.shoe4.path,
     ),
     ShoeModel(
       name: "Nike Club Max",
@@ -36,41 +37,19 @@ class CartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ProjectColors.cultured,
-      appBar: AppBar(
-        backgroundColor: ProjectColors.cultured,
-        title: const Text("My Cart"),
-        leading: Container(
-          margin: EdgeInsets.only(left: 10.w),
-          decoration: const BoxDecoration(color: ProjectColors.white, shape: BoxShape.circle),
-          child: IconButton(
-            onPressed: () {
-              Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(builder: (context) => const BottomNavBar()),
-                (route) => false,
-              );
-            },
-            icon: const Icon(Icons.arrow_back),
-          ),
-        ),
-      ),
+      appBar: const _CustomAppBar(),
       body: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w),
-                child: Text(
-                  "${cartItems.length} item",
-                  style: context.textTheme().titleMedium,
-                ),
-              ),
+              _ItemContText(cartItems: cartItems.length),
               Expanded(
                 child: ListView.builder(
-                  padding: EdgeInsets.only(bottom: 200), 
+                  padding: EdgeInsets.only(bottom: 230.h),
                   itemCount: cartItems.length,
                   itemBuilder: (context, index) {
-                    return SlidableShoeItem(
+                    return _SlidableShoeItem(
                       shoe: cartItems[index],
                     );
                   },
@@ -78,116 +57,127 @@ class CartView extends StatelessWidget {
               ),
             ],
           ),
-          
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: Container(
-              height: 200,
-              decoration: const BoxDecoration(
-                color: ProjectColors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    offset: Offset(0, -2),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(16.w),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Subtotal", 
-                          style: TextStyle(fontSize: 16.sp, color: Colors.grey)
-                        ),
-                        Text(
-                          "\$387.50", 
-                          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold)
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Shipping", 
-                          style: TextStyle(fontSize: 16.sp, color: Colors.grey)
-                        ),
-                        Text(
-                          "\$10.00", 
-                          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold)
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 12),
-                    Divider(),
-                    SizedBox(height: 12),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Total", 
-                          style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold)
-                        ),
-                        Text(
-                          "\$397.50", 
-                          style: TextStyle(
-                            fontSize: 18.sp, 
-                            fontWeight: FontWeight.bold,
-                            color: ProjectColors.brandeisBlue,
-                          )
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50.h,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: ProjectColors.brandeisBlue,
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                        child: Text(
-                          "Checkout",
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+          const _TotalCostContainer(),
         ],
       ),
     );
   }
 }
 
-class SlidableShoeItem extends StatelessWidget {
+class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const _CustomAppBar();
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      backgroundColor: ProjectColors.cultured,
+      title: const Text(ProjectStrings.myCart),
+      leading: Container(
+        margin: EdgeInsets.only(left: 10.w),
+        decoration: const BoxDecoration(color: ProjectColors.white, shape: BoxShape.circle),
+        child: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+class _ItemContText extends StatelessWidget {
+  const _ItemContText({
+    required this.cartItems,
+  });
+
+  final int cartItems;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      child: Text(
+        "$cartItems ${ProjectStrings.item}",
+        style: context.textTheme().titleMedium,
+      ),
+    );
+  }
+}
+
+class _TotalCostContainer extends StatelessWidget {
+  const _TotalCostContainer();
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      left: 0,
+      right: 0,
+      bottom: 0,
+      child: Container(
+        height: 230.h,
+        decoration: BoxDecoration(
+          color: ProjectColors.white,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: ProjectColors.black.withOpacity(0.1),
+              blurRadius: 10,
+              offset: const Offset(0, -2),
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(16.w),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(ProjectStrings.subtotal,
+                      style: context.textTheme().titleMedium?.copyWith(color: ProjectColors.auroMetal)),
+                  Text("\$407.30", style: context.textTheme().titleMedium),
+                ],
+              ),
+              SizedBox(height: 8.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(ProjectStrings.delivery,
+                      style: context.textTheme().titleMedium?.copyWith(color: ProjectColors.auroMetal)),
+                  Text("\$10.00", style: context.textTheme().titleMedium),
+                ],
+              ),
+              SizedBox(height: 12.h),
+              const Divider(),
+              SizedBox(height: 12.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(ProjectStrings.totalCost, style: context.textTheme().titleMedium),
+                  Text("\$417.30", style: context.textTheme().titleMedium?.copyWith(color: ProjectColors.brandeisBlue)),
+                ],
+              ),
+              const Spacer(),
+              ProjectButton(title: ProjectStrings.checkout, onPressed: () {})
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _SlidableShoeItem extends StatelessWidget {
   final ShoeModel shoe;
 
-  const SlidableShoeItem({
-    super.key,
+  const _SlidableShoeItem({
     required this.shoe,
   });
 
@@ -239,13 +229,21 @@ class SlidableShoeItem extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Container(
-                width: 100.w,
-                height: 100.h,
-                padding: EdgeInsets.all(8.w),
-                child: Image.asset(
-                  shoe.imagePath,
-                  fit: BoxFit.contain,
+              InkWell(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => HomeDetailView(shoeModel: shoe))),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: ProjectColors.cultured,
+                  ),
+                  margin: const EdgeInsets.all(8),
+                  width: 100.w,
+                  height: 100.h,
+                  child: Image.asset(
+                    shoe.imagePath,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
               Expanded(
@@ -262,7 +260,7 @@ class SlidableShoeItem extends StatelessWidget {
                       Text("\$${shoe.price.toStringAsFixed(2)}", style: context.textTheme().bodyLarge),
                       SizedBox(height: 4.h),
                       Text(
-                        "Quantity: 1",
+                        ProjectStrings.quantity,
                         style: context.textTheme().bodyLarge?.copyWith(color: ProjectColors.dimGray),
                       ),
                     ],

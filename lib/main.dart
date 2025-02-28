@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nike_ui_clone/feature/tabbar/tabbar_view.dart';
+import 'package:nike_ui_clone/feature/navbar/navbar_view.dart';
 import 'package:nike_ui_clone/product/theme/app_theme.dart';
 
 void main() {

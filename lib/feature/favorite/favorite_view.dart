@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nike_ui_clone/feature/home/home_detail_view.dart';
-import 'package:nike_ui_clone/feature/tabbar/tabbar_view.dart';
+import 'package:nike_ui_clone/feature/navbar/navbar_view.dart';
 import 'package:nike_ui_clone/product/constants/enum/png_general_path.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';

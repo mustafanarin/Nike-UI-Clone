@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nike_ui_clone/feature/cart/my_cart_view.dart';
 import 'package:nike_ui_clone/feature/favorite/favorite_view.dart';
 import 'package:nike_ui_clone/feature/home/home_view.dart';
+import 'package:nike_ui_clone/feature/notification/notification_view.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 
 final class BottomNavBar extends StatefulWidget {
@@ -27,8 +28,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final List<Widget> _pages = [
     const HomeView(),
     const FavoriteView(),
-     CartView(),
-    Container(color: Colors.amber),
+    CartView(),
+    NotificationView(),
     Container(color: Colors.amber),
   ];
 
@@ -48,7 +49,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             setState(() {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  CartView()),
+                MaterialPageRoute(builder: (context) => CartView()),
               );
             });
           },

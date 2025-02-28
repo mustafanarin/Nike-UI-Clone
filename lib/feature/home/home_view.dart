@@ -35,9 +35,9 @@ class _HomeViewState extends State<HomeView> {
               onCategorySelected: (index) {
                 setState(() => _selectedIndex = index);
               }),
-          const _RowTitleAndSeeMoreButton(ProjectStrings.popularShoes),
+           _RowTitleAndSeeMoreButton(ProjectStrings.popularShoes),
           _PopularShoesGridViewList(popularShoes: _popularShoes),
-          const _RowTitleAndSeeMoreButton(ProjectStrings.newArrivals),
+           _RowTitleAndSeeMoreButton(ProjectStrings.newArrivals),
           const _SummerSaleOfferCard(),
         ],
       ),
@@ -120,7 +120,8 @@ class _SearchTextFieldRow extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const ProjectTextField(
+              child: 
+               ProjectTextField(
                 prefixIcon: Icon(Icons.search),
                 hintText: ProjectStrings.search,
                 fillColor: ProjectColors.white,
@@ -298,7 +299,7 @@ class _RowTitleAndSeeMoreButton extends StatelessWidget {
           ),
           TextButton(
               onPressed: () {},
-              child: const Text(
+              child:  Text(
                 ProjectStrings.seeAll,
                 style: TextStyle(color: ProjectColors.brandeisBlue),
               ))
@@ -312,20 +313,27 @@ class _CategorySelector extends StatelessWidget {
   const _CategorySelector({
     required this.selectedIndex,
     required this.onCategorySelected,
-    this.categories = const [
-      ProjectStrings.allShoes,
-      ProjectStrings.outdoor,
-      ProjectStrings.tennis,
-      ProjectStrings.running,
-      ProjectStrings.football
-    ],
+    this.useDefaultCategories = true,
+    this.customCategories,
   });
 
-  final List<String> categories;
+  final bool useDefaultCategories;
+  final List<String>? customCategories;
   final int selectedIndex;
   final Function(int) onCategorySelected;
+  
   @override
   Widget build(BuildContext context) {
+    final categories = useDefaultCategories
+        ? [
+            ProjectStrings.allShoes,
+            ProjectStrings.outdoor,
+            ProjectStrings.tennis,
+            ProjectStrings.running,
+            ProjectStrings.football
+          ]
+        : customCategories!;
+        
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -351,7 +359,6 @@ class _CategorySelector extends StatelessWidget {
     );
   }
 }
-
 class _CategoryButton extends StatelessWidget {
   final String text;
   final bool isSelected;

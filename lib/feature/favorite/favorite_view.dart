@@ -72,7 +72,7 @@ class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: const Icon(Icons.arrow_back),
         ),
       ),
-      title: const Text(ProjectStrings.favorite),
+      title:  Text(ProjectStrings.favorite),
       actions: [
         Container(
             decoration: const BoxDecoration(color: ProjectColors.white, shape: BoxShape.circle),

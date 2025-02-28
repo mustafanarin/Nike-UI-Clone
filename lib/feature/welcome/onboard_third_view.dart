@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nike_ui_clone/feature/authentication/login_view.dart';
 import 'package:nike_ui_clone/product/constants/enum/png_onboard_path.dart';
 import 'package:nike_ui_clone/product/constants/project_colors.dart';
 import 'package:nike_ui_clone/product/constants/project_strings.dart';
@@ -126,9 +127,11 @@ class _NextButton extends StatelessWidget {
         bottom: 40.h,
         left: 20.w,
         right: 20.w,
-        child:  ProjectButton(
+        child: ProjectButton(
           backgroundColor: ProjectColors.white,
-          onPressed: (){},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LoginView()));
+          },
           title: ProjectStrings.onboard1Button,
         ));
   }

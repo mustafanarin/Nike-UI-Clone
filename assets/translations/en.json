@@ -1,0 +1,74 @@
+{
+    "nike": "NIKE",
+    
+    "onboard1Title": "WELLCOME TO\nNİKE",
+    "onboard1Button": "Get Started",
+    
+    "onboard2Title": "Let's Start Journay With Nike",
+    "onboard2SubTitle": "Smart, Gorgeous & Fashionable Collection Explor Now",
+    
+    "onboard3Title": "You Have the Power To",
+    "onboard3SubTitle": "There Are Many Beautiful And Attractive Plants To Your Room",
+    
+    "helloText": "Hello Again!",
+    "helloSupTitle": "Fill Your Details Or Continue With \nSocial Media",
+    "emailAddress": "Email Address",
+    "emailHint": "xyz@gmail.com",
+    "password": "Password",
+    "passwordHint": "●●●●●●●●",
+    "recoveryPassword": "Recovery Password",
+    "signInButton": "Sign In",
+    "signInGoogleButton": "Sign In with Google",
+    "newUser": "New User? ",
+    "createAccount": "Create Account",
+    
+    "yourName": "Your Name",
+    "nameHint": "xxxxxxxxx",
+    "registerTitle": "Register Account",
+    "signUpButton": "Sign Up",
+    "signUpGoogleButton": "Sign up with Google",
+    "alreadyAccount": "Already Have Account? ",
+    "logIn": "Log In",
+    
+    "resetPassword": "Reset Password",
+    "forgotPassword": "Forgot Password",
+    "forgotPasswordSubTitle": "Enter Your Email Account To Reset \nYour Password",
+    
+    "explore": "Explore",
+    "search": "Looking for shoes",
+    "selectCategory": "Select Category",
+    "allShoes": "All Shoes",
+    "outdoor": "Outdoor",
+    "tennis": "Tennis",
+    "running": "Running",
+    "football": "Football",
+    "popularShoes": "Popular Shoes",
+    "newArrivals": "New Arrivals",
+    "summerSale": "Summer Sale",
+    "sale": "15% OFF",
+    "seeAll": "See all",
+    
+    "sneakerShop": "Sneaker Shop",
+    "shoeDescription": "The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike......",
+    "readMore": "Read More",
+    "add": "Add To Card",
+    
+    "favorite": "Favourite",
+    
+    "myCart": "My Cart",
+    "item": "item",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "totalCost": "Total Cost",
+    "checkout": "Checkout",
+    "quantity": "Quantity: 1",
+    
+    "notification": "Notifications",
+    "recent": "Recent",
+    "yesterday": "Yesterday",
+    
+    "profile": "Profile",
+    "userName": "EMMANUEL OYIBOKE",
+    "userEmail": "emmanueloyiboke@gmail.com",
+    "saveNow": "Save Now"
+  }

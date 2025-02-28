@@ -1,88 +1,89 @@
+import 'package:easy_localization/easy_localization.dart';
+
 abstract final class ProjectStrings {
   // Splash
-  static const String nike = 'NIKE';
+  static String get nike => 'nike'.tr();
 
   // Onboard first
-  static const String onboard1Title = "WELLCOME TO\nNİKE";
-  static const String onboard1Button = "Get Started";
+  static String get onboard1Title => 'onboard1Title'.tr();
+  static String get onboard1Button => 'onboard1Button'.tr();
 
   // Onboard second
-  static const String onboard2Title = "Let's Start Journay With Nike";
-  static const String onboard2SubTitle = "Smart, Gorgeous & Fashionable Collection Explor Now";
+  static String get onboard2Title => 'onboard2Title'.tr();
+  static String get onboard2SubTitle => 'onboard2SubTitle'.tr();
 
   // Onboard third
-  static const String onboard3Title = "You Have the Power To";
-  static const String onboard3SubTitle = "There Are Many Beautiful And Attractive Plants To Your Room";
+  static String get onboard3Title => 'onboard3Title'.tr();
+  static String get onboard3SubTitle => 'onboard3SubTitle'.tr();
 
   // Login
-  static const String helloText = "Hello Again!";
-  static const String helloSupTitle = "Fill Your Details Or Continue With \nSocial Media";
-  static const String emailAddress = "Email Address";
-  static const String emailHint = "xyz@gmail.com";
-  static const String password = "Password";
-  static const String passwordHint = "●●●●●●●●";
-  static const String recoveryPassword = "Recovery Password";
-  static const String signInButton = "Sign In";
-  static const String signInGoogleButton = "Sign In with Google";
-  static const String newUser = "New User? ";
-  static const String createAccount = "Create Account";
+  static String get helloText => 'helloText'.tr();
+  static String get helloSupTitle => 'helloSupTitle'.tr();
+  static String get emailAddress => 'emailAddress'.tr();
+  static String get emailHint => 'emailHint'.tr();
+  static String get password => 'password'.tr();
+  static String get passwordHint => 'passwordHint'.tr();
+  static String get recoveryPassword => 'recoveryPassword'.tr();
+  static String get signInButton => 'signInButton'.tr();
+  static String get signInGoogleButton => 'signInGoogleButton'.tr();
+  static String get newUser => 'newUser'.tr();
+  static String get createAccount => 'createAccount'.tr();
 
   // Register
-  static const String yourName = "Your Name";
-  static const String nameHint = "xxxxxxxxx";
-  static const String registerTitle = "Register Account";
-  static const String signUpButton = "Sign Up";
-  static const String signUpGoogleButton = "Sign up with Google";
-  static const String alreadyAccount = "Already Have Account? ";
-  static const String logIn = "Log In";
+  static String get yourName => 'yourName'.tr();
+  static String get nameHint => 'nameHint'.tr();
+  static String get registerTitle => 'registerTitle'.tr();
+  static String get signUpButton => 'signUpButton'.tr();
+  static String get signUpGoogleButton => 'signUpGoogleButton'.tr();
+  static String get alreadyAccount => 'alreadyAccount'.tr();
+  static String get logIn => 'logIn'.tr();
 
   // Forgot Password
-  static const String resetPassword = "Reset Password";
-  static const String forgotPassword = "Forgot Password";
-  static const String forgotPasswordSubTitle = "Enter Your Email Account To Reset \nYour Password";
+  static String get resetPassword => 'resetPassword'.tr();
+  static String get forgotPassword => 'forgotPassword'.tr();
+  static String get forgotPasswordSubTitle => 'forgotPasswordSubTitle'.tr();
 
   // Home
-  static const String explore = "Explore";
-  static const String search = "Looking for shoes";
-  static const String selectCategory = "Select Category";
-  static const String allShoes = 'All Shoes';
-  static const String outdoor = 'Outdoor';
-  static const String tennis = "Tennis";
-  static const String running = 'Running';
-  static const String football = 'Football';
-  static const String popularShoes = "Popular Shoes";
-  static const String newArrivals = "New Arrivals";
-  static const String summerSale = "Summer Sale";
-  static const String sale = "15% OFF";
-  static const String seeAll = "See all";
+  static String get explore => 'explore'.tr();
+  static String get search => 'search'.tr();
+  static String get selectCategory => 'selectCategory'.tr();
+  static String get allShoes => 'allShoes'.tr();
+  static String get outdoor => 'outdoor'.tr();
+  static String get tennis => 'tennis'.tr();
+  static String get running => 'running'.tr();
+  static String get football => 'football'.tr();
+  static String get popularShoes => 'popularShoes'.tr();
+  static String get newArrivals => 'newArrivals'.tr();
+  static String get summerSale => 'summerSale'.tr();
+  static String get sale => 'sale'.tr();
+  static String get seeAll => 'seeAll'.tr();
 
   // Home Detail
-  static const String sneakerShop = "Sneaker Shop";
-  static const String shoeDescription =
-      "The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike......";
-  static const String readMore = "Read More";
-  static const String add = "Add To Card";
+  static String get sneakerShop => 'sneakerShop'.tr();
+  static String get shoeDescription => 'shoeDescription'.tr();
+  static String get readMore => 'readMore'.tr();
+  static String get add => 'add'.tr();
 
   // Favorite
-  static const String favorite = "Favourite";
+  static String get favorite => 'favorite'.tr();
 
   // My Cart
-  static const String myCart = "My Cart";
-  static const String item = "item";
-  static const String subtotal = "Subtotal";
-  static const String delivery = "Delivery";
-  static const String totalCost = "Total Cost";
-  static const String checkout = "Checkout";
-  static const String quantity = "Quantity: 1";
+  static String get myCart => 'myCart'.tr();
+  static String get item => 'item'.tr();
+  static String get subtotal => 'subtotal'.tr();
+  static String get delivery => 'delivery'.tr();
+  static String get totalCost => 'totalCost'.tr();
+  static String get checkout => 'checkout'.tr();
+  static String get quantity => 'quantity'.tr();
 
   // Notification
-  static const String notification = "Notifications";
-  static const String recent = "Recent";
-  static const String yesterday = "Yesterday";
+  static String get notification => 'notification'.tr();
+  static String get recent => 'recent'.tr();
+  static String get yesterday => 'yesterday'.tr();
 
   // Profile
-  static const String profile = "Profile";
-  static const String userName = "EMMANUEL OYIBOKE";
-  static const String userEmail = "emmanueloyiboke@gmail.com";
-  static const String saveNow = "Save Now";
+  static String get profile => 'profile'.tr();
+  static String get userName => 'userName'.tr();
+  static String get userEmail => 'userEmail'.tr();
+  static String get saveNow => 'saveNow'.tr();
 }

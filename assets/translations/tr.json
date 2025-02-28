@@ -1,0 +1,74 @@
+{
+    "nike": "NIKE",
+    
+    "onboard1Title": "NIKE'A\nHOŞ GELDİNİZ",
+    "onboard1Button": "Başlayın",
+    
+    "onboard2Title": "Nike ile Yolculuğa Başlayalım",
+    "onboard2SubTitle": "Akıllı, Muhteşem ve Modaya Uygun Koleksiyonu Keşfedin",
+    
+    "onboard3Title": "Güce Sahipsiniz",
+    "onboard3SubTitle": "Odanız İçin Birçok Güzel ve Çekici Bitki Var",
+    
+    "helloText": "Tekrar Merhaba!",
+    "helloSupTitle": "Bilgilerinizi Doldurun veya Sosyal Medya ile \nDevam Edin",
+    "emailAddress": "E-posta Adresi",
+    "emailHint": "xyz@gmail.com",
+    "password": "Şifre",
+    "passwordHint": "●●●●●●●●",
+    "recoveryPassword": "Şifre Kurtarma",
+    "signInButton": "Giriş Yap",
+    "signInGoogleButton": "Google ile Giriş Yap",
+    "newUser": "Yeni Kullanıcı? ",
+    "createAccount": "Hesap Oluştur",
+    
+    "yourName": "Adınız",
+    "nameHint": "xxxxxxxxx",
+    "registerTitle": "Hesap Kaydı",
+    "signUpButton": "Kaydol",
+    "signUpGoogleButton": "Google ile Kaydol",
+    "alreadyAccount": "Zaten Hesabınız Var mı? ",
+    "logIn": "Giriş Yap",
+    
+    "resetPassword": "Şifreyi Sıfırla",
+    "forgotPassword": "Şifremi Unuttum",
+    "forgotPasswordSubTitle": "Şifrenizi Sıfırlamak İçin E-posta \nHesabınızı Girin",
+    
+    "explore": "Keşfet",
+    "search": "Ayakkabı arıyorum",
+    "selectCategory": "Kategori Seçin",
+    "allShoes": "Tümü",
+    "outdoor": "Outdoor",
+    "tennis": "Tenis",
+    "running": "Koşu",
+    "football": "Futbol",
+    "popularShoes": "Popüler Ayakkabılar",
+    "newArrivals": "Yeni Gelenler",
+    "summerSale": "Yaz İndirimi",
+    "sale": "%15 İNDİRİM",
+    "seeAll": "Tümünü gör",
+    
+    "sneakerShop": "Sneaker Mağazası",
+    "shoeDescription": "Max Air 270 ünitesi, rakipsiz, gün boyu süren konfor sunar. Şık, koşu esintili tasarım sizi Nike'ın tüm özelliklerine bağlar......",
+    "readMore": "Daha Fazla Oku",
+    "add": "Sepete Ekle",
+    
+    "favorite": "Favoriler",
+    
+    "myCart": "Sepetim",
+    "item": "ürün",
+    "subtotal": "Ara Toplam",
+    "delivery": "Teslimat",
+    "totalCost": "Toplam Tutar",
+    "checkout": "Ödeme Yap",
+    "quantity": "Miktar: 1",
+    
+    "notification": "Bildirimler",
+    "recent": "Yakın Zamanda",
+    "yesterday": "Dün",
+    
+    "profile": "Profil",
+    "userName": "EMMANUEL OYIBOKE",
+    "userEmail": "emmanueloyiboke@gmail.com",
+    "saveNow": "Şimdi Kaydet"
+  }

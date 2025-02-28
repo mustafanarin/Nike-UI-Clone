@@ -1,19 +1,16 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nike_ui_clone/feature/navbar/navbar_view.dart';
 import 'package:nike_ui_clone/feature/welcome/splash_view.dart';
 import 'package:nike_ui_clone/product/theme/app_theme.dart';
+import 'package:nike_ui_clone/product/utility/initializer/app_initializer.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+Future<void> main() async {
+  await AppInitializer.initialize();
 
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.light,
-    statusBarBrightness: Brightness.dark,
-  ));
-  runApp(const MyApp());
+  runApp(
+    AppInitializer.initializeApp(const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -25,10 +22,13 @@ class MyApp extends StatelessWidget {
       designSize: const Size(393, 808),
       builder: (context, child) {
         return MaterialApp(
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
           debugShowCheckedModeBanner: false,
           theme: AppTheme.getLightTheme,
-          title: 'Material App',
-          home: SplashView(),
+          title: 'Nike',
+          home: const SplashView(),
         );
       },
     );

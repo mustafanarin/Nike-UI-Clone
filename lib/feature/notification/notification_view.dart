@@ -70,7 +70,7 @@ class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: ProjectColors.cultured,
-      title: const Text(ProjectStrings.notification),
+      title:  Text(ProjectStrings.notification),
       leading: Container(
         margin: EdgeInsets.only(left: 10.w),
         decoration: const BoxDecoration(color: ProjectColors.white, shape: BoxShape.circle),

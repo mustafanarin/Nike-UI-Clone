@@ -18,6 +18,8 @@ dependencies:
 
   # Core
   flutter_screenutil: ^5.9.3
+  easy_localization: ^3.0.7+1
+
 
 dev_dependencies:
   flutter_test:
@@ -34,7 +36,9 @@ flutter:
   assets:
     - assets/png/onboardings/
     - assets/png/general/
-  #   - images/a_dot_ham.jpeg
+    - assets/translations/
+
+
 
 
   # example:

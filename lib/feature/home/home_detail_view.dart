@@ -51,7 +51,7 @@ class _CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
             },
             icon: const Icon(Icons.arrow_back)),
       ),
-      title: const Text(ProjectStrings.sneakerShop),
+      title:  Text(ProjectStrings.sneakerShop),
       actions: [
         Stack(
           children: [
@@ -207,7 +207,7 @@ class _FavoriteAndBasketAddButtons extends StatelessWidget {
               color: ProjectColors.white,
             ),
             onPressed: () {},
-            label: const Text(
+            label:  Text(
               ProjectStrings.add,
               style: TextStyle(color: ProjectColors.white),
             ),

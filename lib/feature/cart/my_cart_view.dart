@@ -71,7 +71,7 @@ class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: ProjectColors.cultured,
-      title: const Text(ProjectStrings.myCart),
+      title:  Text(ProjectStrings.myCart),
       leading: Container(
         margin: EdgeInsets.only(left: 10.w),
         decoration: const BoxDecoration(color: ProjectColors.white, shape: BoxShape.circle),

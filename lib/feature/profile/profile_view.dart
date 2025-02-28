@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nike_ui_clone/feature/navbar/navbar_view.dart';
@@ -56,11 +57,55 @@ class _CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           icon: const Icon(Icons.arrow_back),
         ),
       ),
+      actions: const [_LanguageSelector()],
     );
   }
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+class _LanguageSelector extends StatelessWidget {
+  const _LanguageSelector();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: DropdownButton<String>(
+        value: context.locale.languageCode,
+        icon: const Icon(Icons.language),
+        elevation: 16,
+        style:  context.textTheme().bodyLarge,
+        underline: Container(
+          height: 2,
+          color: ProjectColors.black,
+        ),
+        onChanged: (String? newValue) {
+          if (newValue != null) {
+            context.setLocale(Locale(newValue));
+          }
+        },
+        items: context.supportedLocales.map<DropdownMenuItem<String>>((Locale locale) {
+          return DropdownMenuItem<String>(
+            value: locale.languageCode,
+            child: Text(_getLanguageName(locale.languageCode)),
+          );
+        }).toList(),
+      ),
+    );
+  }
+
+  String _getLanguageName(String languageCode) {
+    switch (languageCode) {
+      case 'en':
+        return 'English';
+      case 'tr':
+        return 'Türkçe';
+      default:
+        return languageCode;
+    }
+  }
 }
 
 class _UserProfilePhoto extends StatelessWidget {
@@ -93,23 +138,21 @@ class _UserProfilePhoto extends StatelessWidget {
 }
 
 class _UserInfoColumn extends StatelessWidget {
-  const _UserInfoColumn({
-    super.key,
-  });
+  const _UserInfoColumn();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const _UserInfoContainer(
+        _UserInfoContainer(
           containerTitle: ProjectStrings.yourName,
           value: ProjectStrings.userName,
         ),
-        const _UserInfoContainer(containerTitle: ProjectStrings.emailAddress, value: ProjectStrings.userEmail),
+        _UserInfoContainer(containerTitle: ProjectStrings.emailAddress, value: ProjectStrings.userEmail),
         SizedBox(
           height: 24.h,
         ),
-        const _UserInfoContainer(
+        _UserInfoContainer(
           containerTitle: ProjectStrings.password,
           value: ProjectStrings.passwordHint,
           isPasswrod: true,

@@ -25,7 +25,7 @@ This project is a clone of Nike's user interface. It was developed using Flutter
 <img width="262" alt="Ekran Resmi 2025-02-28 12 48 56" src="https://github.com/user-attachments/assets/9063b529-f885-4061-9cfa-c0db3e70c9ba" />
 <img width="262" alt="Ekran Resmi 2025-02-28 12 49 11" src="https://github.com/user-attachments/assets/36692896-7a61-4c12-b506-0050c8d23ec7" />
 <img width="262" alt="Ekran Resmi 2025-02-28 12 49 20" src="https://github.com/user-attachments/assets/bcc5d1a2-cf12-4030-ae83-bc9f058b2ee2" />
-<img width="262" alt="Ekran Resmi 2025-02-28 12 49 25" src="https://github.com/user-attachments/assets/8e31028c-626e-495f-a433-8da1bb3c7d95" />
+<img width="261" alt="Ekran Resmi 2025-03-04 23 22 33" src="https://github.com/user-attachments/assets/fe7ad3da-842a-40ae-96f9-124b22b12388" />
 <img width="262" alt="Ekran Resmi 2025-02-28 12 49 33" src="https://github.com/user-attachments/assets/03d214b2-57d2-4805-a17c-d440b6137325" />
 <img width="262" alt="Ekran Resmi 2025-02-28 12 49 39" src="https://github.com/user-attachments/assets/29cdbd93-520f-422a-9bbd-0f6be05cdb87" />
 
